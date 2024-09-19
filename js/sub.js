@@ -399,7 +399,7 @@ const lifeElc = () => {
             img.setAttribute('width', `290px`);
             const a = document.createElement('a');
             // 상세페이지 url 설정
-            if (location.pathname.split('/').pop() === 'MoLifeElc.html') a.setAttribute('href', `/page/products/lifeelc/MoLifeElcDetail.html`);
+            if (location.pathname.split('/').pop() === 'MoLifeElc.html') a.setAttribute('href', `./lifeelc/MoLifeElcDetail.html`);
             else a.setAttribute('href', `../products/lifeelc/lifeelcDetail.html`);
             a.addEventListener('click', (e) => {
                 // localstorage 사용
