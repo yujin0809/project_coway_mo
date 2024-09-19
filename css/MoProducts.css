@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .wrap {
     width: 100%;
 }
@@ -624,7 +628,7 @@
 }
 
 #lifeElcDetail .leftDiv {
-    width: 180.56vw;
+    /* width: 180.56vw; */
     margin-top: 11.11vw;
     margin-bottom: 11.11vw;
 }
@@ -660,14 +664,14 @@
 }
 
 #lifeElcDetail .detailDiv .rightDiv {
-    width: 152.78vw;
+    /* width: 152.78vw; */
     margin-top: 11.11vw;
     margin-bottom: 11.11vw;
     padding-left: 2vw;
 }
 
 #lifeElcDetail .detailDiv .rightDiv .info {
-    width: 80vw;
+    width: 100%;
     height: 57.67vw;
     background-color: #ffffff;
     border-top-left-radius: 2.22vw;
@@ -730,12 +734,11 @@
 }
 
 #lifeElcDetail .detailDiv .rightDiv .option {
-    width: 80vw;
-    height: 25vw;
+    width: 100%;
     background-color: #ffffff;
     border-bottom-left-radius: 2.22vw;
     border-bottom-right-radius: 2.22vw;
-    padding: 8.33vw;
+    padding: 0 8.33vw 8.33vw 8.33vw;
     border-top: 0.28vw solid var(--border-color-1);
 }
 
@@ -781,12 +784,12 @@
 }
 
 #lifeElcDetail .detailDiv .rightDiv .Type {
-    width: 96vw;
+    width: 100%;
     height: 13.89vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8.33vw;
+    /* padding-top: 8.33vw; */
 }
 
 #lifeElcDetail .detailDiv .rightDiv .Type .rentType,
@@ -818,7 +821,7 @@
 
 #lifeElcDetail .detailDiv .rightDiv .rent,
 #lifeElcDetail .detailDiv .rightDiv .buy {
-    width: 78.4vw;
+    width: 100%;
     padding: 8.33vw;
     background: white;
     border: 0.56vw solid #000;
@@ -1088,7 +1091,7 @@
 }
 
 #lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult {
-    padding: 5.56vw 0 5.56vw;
+    padding: 5.56vw 5vw;
 }
 
 #lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal {
@@ -1117,7 +1120,7 @@
     justify-content: center;
     align-items: center;
     gap: 2.78vw;
-    padding-bottom: 5.56vw;
+    padding: 5.56vw 5vw;
 }
 
 #lifeElcDetail .detailDiv .rightDiv .rent .rentBtns button {
@@ -1152,7 +1155,7 @@
 
 #lifeElcDetail .detailDiv .rightDiv .rent .rentNotice {
     border-top: 0.28vw solid var(--border-color-2);
-    padding: 2.78vw 0 2.78vw;
+    padding: 2.78vw 4vw 6vw;
 }
 
 #lifeElcDetail .detailDiv .rightDiv .rent .rentNotice p {

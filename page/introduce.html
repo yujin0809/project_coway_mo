@@ -39,7 +39,7 @@
         <div id="wrap">
             <!-- header -->
             <!-- 경로 수정 필요 -->
-            <div class="header_menu" style="width: 360px">
+            <div class="header_menu" style="width: 100vw">
                 <div class="top">
                     <a href="#">
                         <h2>로그인을 해주세요.<i class="xi-angle-right-min"></i></h2>
@@ -412,6 +412,18 @@
                 </ul>
             </footer>
             <!-- //footer -->
+            <!-- 모달 -->
+            <div id="modal" style="display: none">
+                <div class="background"></div>
+                <div class="popup popup1">
+                    <strong id="popupTitle"></strong>
+                    <p id="popupDesc"></p>
+                    <button class="close"><i class="xi-close"></i></button>
+                    <div class="btns">
+                        <button class="sure">확인</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
             const get = (target) => document.querySelector(target);
@@ -425,6 +437,13 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
+            // sub header 뒤로가기 -----
+            const $prevBtn = get('#header .prev');
+            $prevBtn.addEventListener('click', (e) => {
+                history.back();
+            });
+            // ----------
+
             var swiper = new Swiper('.introduce .mySwiper', {
                 spaceBetween: 10,
                 loop: true,

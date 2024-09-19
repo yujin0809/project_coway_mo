@@ -4,6 +4,7 @@
     /* ******************************** */
     margin-top: 16.667vw;
     /* ㄴ헤더 들어가는 서브페이지에 필수 */
+    overflow: hidden;
 }
 /* .intro-visual */
 .introduce .intro-visual {
@@ -71,7 +72,7 @@
 /* box2 */
 .introduce .inner .sub-text-image {
     margin-top: 16.67vw;
-    padding: 2.78vw;
+    padding: 5.556vw;
 }
 .introduce .inner .sub-text-image li {
     display: block;
@@ -130,7 +131,7 @@
     width: 100%;
 }
 .introduce .inner .store-experience .explain-box {
-    width: 94.44vw;
+    width: 88.889vw;
     margin: auto;
     border-radius: 1.39vw;
     background: #fff;
@@ -139,7 +140,7 @@
     padding: 8.33vw 0;
     position: absolute;
     top: 69.44vw;
-    left: 2.78vw;
+    left: 5.78vw;
 }
 .introduce .inner .store-experience .explain-box h3 {
     font-size: 4.17vw;
