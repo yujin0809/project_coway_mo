@@ -400,7 +400,7 @@ const lifeElc = () => {
             const a = document.createElement('a');
             // 상세페이지 url 설정
             if (location.pathname.split('/').pop() === 'MoLifeElc.html') a.setAttribute('href', `/page/products/lifeelc/MoLifeElcDetail.html`);
-            else a.setAttribute('href', `/page/products/lifeelc/lifeelcDetail.html`);
+            else a.setAttribute('href', `../products/lifeelc/lifeelcDetail.html`);
             a.addEventListener('click', (e) => {
                 // localstorage 사용
                 localStorage.setItem('productDetail', JSON.stringify(data));
@@ -921,7 +921,7 @@ const lifeElc = () => {
                                 if (p === model.dataset.model) {
                                     model.classList.add('active'); // 클릭 css 활성화
                                     const imgs = getAll('#lifeElc .contents .itemList ul .listLi .midPhoto a img');
-                                    imgs[pdx].setAttribute('src', `/../images/products/lifeElc/${product.key}/${p}.png`); // 모델사진 수정
+                                    imgs[pdx].setAttribute('src', `../../images/products/lifeElc/${product.key}/${p}.png`); // 모델사진 수정
                                     const models = getAll('#lifeElc .contents .itemList ul .listLi .btm .model');
                                     models[pdx].textContent = `${product.model[i]}`; // 모델명 수정
                                 }
@@ -968,7 +968,7 @@ const lifeElcDetail = () => {
         // 메인 이미지
         const mainImg = get('#lifeElcDetail .detailDiv .leftDiv .mainImg');
         const subImg = get('#lifeElcDetail .detailDiv .leftDiv .subImg');
-        mainImg.setAttribute('src', `${detailData.imgUrl}`);
+        mainImg.setAttribute('src', `../${detailData.imgUrl}`);
 
         // 서브 이미지 배열 선언 (메인 이미지 1 + 서브이미지)
         let subImgArray = [];
@@ -983,7 +983,7 @@ const lifeElcDetail = () => {
 
         // 서브 이미지 - 1
         const subImg1 = get('#lifeElcDetail .detailDiv .leftDiv .subImg .subDiv1 img');
-        subImg1.setAttribute('src', `${detailData.imgUrl}`);
+        subImg1.setAttribute('src', `../${detailData.imgUrl}`);
         subImg1.setAttribute('alt', `${detailData.key}`);
         subImg1.parentElement.classList.add('active');
 
@@ -1004,7 +1004,7 @@ const lifeElcDetail = () => {
                     detailData.key !== 'MB-B01' &&
                     detailData.key !== 'MC-C01'
                 ) {
-                    imgs[idx].setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.key}_display0${idx}.png`);
+                    imgs[idx].setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.key}_display0${idx}.png`);
                     imgs[idx].setAttribute('alt', `display0${idx}.png`);
                 }
                 // CIR-F41, BAS41-A, BB17-A, BB16-A, MC-B02, MC-B03, MB-M02, MB-C01, MB-B01, MC-C01
@@ -1021,7 +1021,7 @@ const lifeElcDetail = () => {
                     detailData.key === 'MC-C01'
                 ) {
                     for (let i = 0; i < detailData.model.length; i++) {
-                        imgs[idx].setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[0]}_display0${idx}.png`);
+                        imgs[idx].setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model[0]}_display0${idx}.png`);
                     }
                     imgs[idx].setAttribute('alt', `display0${idx}.png`);
                 }
@@ -1073,7 +1073,7 @@ const lifeElcDetail = () => {
 
         // starImg
         const starImg = get('#lifeElcDetail .detailDiv .rightDiv .info .starPoint img');
-        starImg.setAttribute('src', `../../images/common/ico_star1.png`);
+        starImg.setAttribute('src', `../../../images/common/ico_star1.png`);
 
         // starCnt
         const starCnt = get('#lifeElcDetail .detailDiv .rightDiv .info .starCnt');
