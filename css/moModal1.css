@@ -17,14 +17,13 @@
 }
 
 .popup {
-    width: 61.11vw;
+    width: 75.11vw;
     /* 220px */
     border: 0.28vw solid #1b2529;
     /* 1px */
     position: fixed;
     top: 13%;
-    left: 13%;
-    transform: translate(-50%, -50%);
+    left: 7%;
     padding: 8.89vw 4.44vw 4.44vw 6.67vw;
     /* 32px 16px 16px 24px */
     border-radius: 1.39vw;

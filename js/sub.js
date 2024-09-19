@@ -30,8 +30,8 @@ const closePopup = () => {
     document.getElementById('modal').style.opacity = '0';
     document.getElementById('modal').style.visibility = 'hidden';
 };
-// get('#modal .close').addEventListener('click', closePopup);
-// get('#modal .sure').addEventListener('click', closePopup);
+get('#modal .close').addEventListener('click', closePopup);
+get('#modal .sure').addEventListener('click', closePopup);
 
 // 제품 사용 함수
 // Hex to color
@@ -3251,337 +3251,8 @@ const contact = () => {
 };
 // ----------
 
-// 로그인, 회원가입, 마이페이지 ---
+// 로그인, 회원가입  ---
 // 회원가입
-const joinPage1 = () => {
-    const $label = get('.join .inner .all-agree label');
-    const $labels = getAll('.join .inner .agree-box label');
-    const $allAgreeBtn = get('.join .inner .all-agree .all-agree-btn');
-    const $agreeBtns = getAll('.join .inner .agree-box .box .agree-btn');
-    const $span = getAll('.join .inner .agree-box .box span');
-    const $nextBtn = get('.join .inner .agree .page-next');
-    const $email = get('.join .inner .email');
-
-    const chk = () => {
-        const allActive = Array.from($agreeBtns).every((btn) => btn.classList.contains('active'));
-        if (allActive) {
-            $allAgreeBtn.classList.add('active');
-            $label.classList.add('active');
-        } else {
-            $allAgreeBtn.classList.remove('active');
-            $label.classList.remove('active');
-        }
-    };
-
-    const nextBtn = () => {
-        let agActive = true;
-        $span.forEach((span, i) => {
-            if (span.dataset.value === '필수' && !$agreeBtns[i].classList.contains('active')) {
-                agActive = false;
-            }
-        });
-
-        if (agActive) {
-            $nextBtn.style.cursor = 'pointer';
-            $nextBtn.style.background = '#1b2529';
-        } else {
-            $nextBtn.style.cursor = 'not-allowed';
-            $nextBtn.style.background = '#a0a0a0';
-        }
-    };
-
-    // 전체 동의
-    $allAgreeBtn.addEventListener('click', (e) => {
-        const isActive = !$allAgreeBtn.classList.contains('active');
-        $allAgreeBtn.classList.toggle('active', isActive);
-        $label.classList.toggle('active', isActive);
-        $agreeBtns.forEach((btn, i) => {
-            btn.classList.toggle('active', isActive);
-            $labels[i].classList.toggle('active', isActive);
-        });
-        nextBtn();
-    });
-    $label.addEventListener('click', (e) => {
-        const isActive = !$allAgreeBtn.classList.contains('active');
-        $allAgreeBtn.classList.toggle('active', isActive);
-        $label.classList.toggle('active', isActive);
-        $agreeBtns.forEach((btn, i) => {
-            btn.classList.toggle('active', isActive);
-            $labels[i].classList.toggle('active', isActive);
-        });
-        nextBtn();
-    });
-
-    // 개별 동의
-    $agreeBtns.forEach((btn, i) => {
-        btn.addEventListener('click', (e) => {
-            btn.classList.toggle('active');
-            $labels[i].classList.toggle('active');
-            chk();
-            nextBtn();
-        });
-    });
-
-    // 개별 라벨
-    $labels.forEach((label, i) => {
-        label.addEventListener('click', (e) => {
-            $agreeBtns[i].classList.toggle('active');
-            $labels[i].classList.toggle('active');
-            chk();
-            nextBtn();
-        });
-    });
-
-    // 다음 버튼
-    $nextBtn.addEventListener('click', (e) => {
-        if ($nextBtn.style.cursor === 'pointer') {
-            $email.classList.add('active');
-        }
-    });
-
-    // > 누르면 팝업 나오기
-    const $more1 = get('.join .inner .agree-box .box2 .more-more');
-    const $more2 = get('.join .inner .agree-box .box3 .more-more');
-    const $more3 = get('.join .inner .agree-box .box4 .more-more');
-    const $explain1 = get('.agree-explain1');
-    const $explain2 = get('.agree-explain2');
-    const $explain3 = get('.agree-explain3');
-    const $closeBtn1 = get('.agree-explain1 .inner .explain-btn');
-    const $closeBtn2 = get('.agree-explain2 .inner .explain-btn');
-    const $closeBtn3 = get('.agree-explain3 .inner .explain-btn');
-    const $pop = get('#pop');
-
-    $more1.addEventListener('click', (e) => {
-        setTimeout(() => {
-            $pop.style.display = `block`;
-            $explain1.classList.add('active');
-        }, 300);
-    });
-    $closeBtn1.addEventListener('click', (e) => {
-        $pop.style.display = ``;
-        $explain1.classList.remove('active');
-    });
-
-    $more2.addEventListener('click', (e) => {
-        setTimeout(() => {
-            $pop.style.display = `block`;
-            $explain2.classList.add('active');
-        }, 300);
-    });
-    $closeBtn2.addEventListener('click', (e) => {
-        $pop.style.display = ``;
-        $explain2.classList.remove('active');
-    });
-
-    $more3.addEventListener('click', (e) => {
-        setTimeout(() => {
-            $pop.style.display = `block`;
-            $explain3.classList.add('active');
-        }, 300);
-    });
-    $closeBtn3.addEventListener('click', (e) => {
-        $pop.style.display = ``;
-        $explain3.classList.remove('active');
-    });
-
-    // 이메일 버튼
-    const $emailError = get('.join .inner .email p');
-    const $emailInp = get('.join .inner .email input[type="email"]');
-    const $emailNextBtn = get('.join .inner .email .page-next');
-
-    $emailInp.addEventListener('input', (e) => {
-        const inpValue = $emailInp.value;
-        if (!inpValue.includes('@') || !inpValue.includes('.com')) {
-            $emailError.classList.add('active');
-            $emailNextBtn.classList.remove('active');
-            $emailNextBtn.style.cursor = `not-allowed`;
-        } else {
-            $emailError.classList.remove('active');
-            $emailNextBtn.style.cursor = `pointer`;
-            $emailNextBtn.classList.add('active');
-        }
-    });
-
-    $emailNextBtn.addEventListener('click', (e) => {
-        const emailValue = $emailInp.value;
-        // 이메일 값을 로컬 스토리지에 저장
-        localStorage.setItem('email', emailValue);
-        // 다음 페이지로 이동
-        window.location.href = 'joinPage2.html';
-    });
-};
-const joinPage2 = () => {
-    const $bottomPop = get('.join .verification-popup');
-    const $rtBtn = get('.join .inner .emailIdentify .rtbtn');
-    let timer = null;
-
-    // 하단 팝업 3초 보이기
-    setTimeout(() => {
-        $bottomPop.style.display = `none`;
-    }, 3000);
-
-    // 값 꺼내오기
-    const $emailValueCome = get('.join .inner .emailIdentify .email-box label');
-    const emailValue = localStorage.getItem('email');
-    $emailValueCome.textContent = emailValue;
-
-    //  재전송 누르면 다시시작 아래팝업/타이머
-    $rtBtn.addEventListener('click', (e) => {
-        $bottomPop.style.display = `block`;
-        setTimeout(() => {
-            $bottomPop.style.display = `none`;
-        }, 3000);
-    });
-
-    const $verInp = get('.join .inner .emailIdentify .verification-box input');
-    const $verError = get('.join .inner .emailIdentify .ver-error'); // active
-    const $verBtn = get('.join .inner .emailIdentify .verification-box .verbtn '); // active
-
-    // 인증번호 , 메세지
-    $verInp.addEventListener('input', (e) => {
-        const iValue = $verInp.value.trim();
-
-        // 숫자인지 확인 (숫자가 아니면 에러 표시)
-        const isNum = /^\d+$/.test(iValue);
-
-        if (isNum && iValue.length === 6) {
-            $verError.classList.add('active');
-            $verBtn.classList.add('active');
-            // 인증버튼
-            $verBtn.addEventListener('click', (e) => {
-                window.location.href = 'joinPage3.html';
-            });
-        } else {
-            $verError.classList.remove('active');
-            $verBtn.classList.remove('active');
-        }
-    });
-};
-const joinPage3 = () => {
-    const $infoName = get('.join .inner .information .name-place input');
-    const $infoPass = get('.join .inner .information .pw-place input[id="infoPassword"]');
-    const $infoPassRe = get('.join .inner .information .pw-place input[id="infoPasswordRe"]');
-    const $nameError = get('.join .inner .information .name-place p');
-    const $passError = get('.join .inner .information .pw-place .pass-error');
-    const $rePassError = get('.join .inner .information .pw-place .repass-error');
-    const $finish = get('.join .inner .information .page-next');
-
-    $infoName.addEventListener('input', (e) => {
-        const valueInfo = $infoName.value;
-        // 문자(한글, 영어)를 찾는 정규 표현식
-        const invalidPattern1 = /[^ㄱ-ㅎ가-힣a-zA-Z]/g;
-        const splitValue = valueInfo.split('');
-        if (invalidPattern1.test(valueInfo)) {
-            $nameError.classList.add('active');
-        } else {
-            $nameError.classList.remove('active');
-        }
-        if (valueInfo.trim() === '') {
-            $nameError.classList.remove('active');
-        }
-        //  이름 값을 로컬 스토리지에 저장
-        localStorage.setItem('name', valueInfo);
-    });
-    const passRepass = () => {
-        // 비밀번호
-
-        const passValue = $infoPass.value.trim();
-        const rePassValue = $infoPassRe.value.trim();
-        const invalidPattern2 = /^[a-zA-Z0-9]+$/;
-
-        // 패스워드가 영문자와 숫자로만 이루어졌는지, 그리고 10자 이상인지 확인
-        if (!invalidPattern2.test(passValue) || passValue.length < 10) {
-            $passError.classList.add('active');
-            $rePassError.classList.remove('active'); // 이 부분은 패스워드가 유효하지 않을 때 재입력 오류를 숨김
-        } else if (passValue !== rePassValue) {
-            $rePassError.classList.add('active');
-            $passError.classList.remove('active');
-            // 비밀번호 확인이 일치하지 않으면 오류 표시
-        } else {
-            $passError.classList.remove('active'); // 패스워드 유효성 검사 통과
-            $rePassError.classList.remove('active'); // 비밀번호 일치 검사 통과
-            $finish.classList.add('active');
-        }
-    };
-    $infoPass.addEventListener('input', passRepass);
-    //재입력
-    $infoPassRe.addEventListener('input', passRepass);
-
-    //팝업 / 모달
-    const showPopup2 = (text3, text4) => {
-        document.getElementById('popupTitle2').textContent = text3;
-        document.getElementById('popupDesc2').textContent = text4;
-        document.getElementById('modal2').style.opacity = '1';
-        document.getElementById('modal2').style.visibility = 'visible';
-    };
-
-    const closePopup2 = () => {
-        window.location.href = '../../index.html';
-    };
-    const surePopup2 = () => {
-        window.location.href = 'login.html';
-    };
-    get('#modal2 .close2').addEventListener('click', closePopup2);
-    get('#modal2 .sure2').addEventListener('click', surePopup2);
-
-    $finish.addEventListener('click', (e) => {
-        showPopup2('회원가입이 완료되었습니다.', '로그인 페이지로 이동합니다.');
-    });
-};
-// 마이페이지
-const myPage = () => {
-    // 팝업 , 모달
-    const $register = get('.myPage .inner .main-text .mypage-visual .register');
-    const $popPage = get('#pop');
-    const $popmodal = get('#modal');
-    const $popPageClose = get('#pop .product-registration .inner .registration-content .close ');
-    const $popPop = get('#pop .product-registration .inner .registration-content p');
-    const $footer = get('#footer');
-    const $goingPros = getAll('.myPage .inner .main-text .recommend-product .product .product-going');
-    const $otherPro = get('.myPage .inner .main-text .recommend-product .other-product');
-
-    $register.addEventListener('click', (e) => {
-        $popPage.style.display = `block`;
-        $footer.style.display = `none`;
-        $popmodal.style.display = 'none';
-    });
-    $popPageClose.addEventListener('click', (e) => {
-        $popPage.style.display = ``;
-        $footer.style.display = `block`;
-        $popmodal.style.display = 'block';
-        $popPop.style.cursor = `pointer`;
-    });
-    $popPop.addEventListener('click', (e) => {
-        showPopup('제품을 찾을 수 없습니다.');
-        $popmodal.style.display = `block`;
-    });
-
-    // console.log($goingPros);
-
-    $goingPros[0].addEventListener('click', (e) => {
-        location.href = '/page/products/berexelc';
-        // localstorage 사용 (보완)
-        // if (location.pathname.split('/').pop() === 'berexelc.html') localStorage.setItem('productDetail', JSON.stringify(objectData[5]));
-    });
-    $goingPros[1].addEventListener('click', (e) => {
-        location.href = '/page/products/lifeelc';
-        // localstorage 사용 (보완)
-        // if (location.pathname.split('/').pop() === 'berexelc.html') localStorage.setItem('productDetail', JSON.stringify(objectData[5]));
-    });
-
-    $otherPro.addEventListener('click', (e) => {
-        location.href = '/page/products/berexelc';
-    });
-
-    const valueInfo = localStorage.getItem('name');
-    if (valueInfo) {
-        const $nameValueMy = get('.myPage .inner .main-text span');
-        $nameValueMy.textContent = valueInfo;
-    }
-
-    document.addEventListener('DOMContentLoaded', myPage);
-};
-
 const join = () => {
     const $label = get('.join .all-agree label');
     const $labels = getAll('.join .agree-box label');
@@ -3674,9 +3345,9 @@ const join = () => {
     });
 
     // 이메일 버튼
-    const $emailError = get('.join  .email p');
-    const $emailInp = get('.join  .email input[type="email"]');
-    const $emailNextBtn = get('.join  .email .page-next');
+    const $emailError = get('.join .email p');
+    const $emailInp = get('.join .email input[type="email"]');
+    const $emailNextBtn = get('.join .email .page-next');
 
     $emailInp.addEventListener('input', (e) => {
         const inpValue = $emailInp.value;
@@ -3688,21 +3359,22 @@ const join = () => {
             $emailError.classList.remove('active');
             $emailNextBtn.style.cursor = `pointer`;
             $emailNextBtn.classList.add('active');
-        }
-    });
-    // 팝업창 오픈
-    const $joinModalBg = get('#modal .background');
-    const $joinPopup = get('#modal .popup');
-    $emailNextBtn.addEventListener('click', (e) => {
-        $joinModalBg.style.display = 'block';
-        $joinPopup.style.display = 'block';
-    });
 
-    // 팝업끄기
-    const $joinClose = get('#modal .popup .close');
-    $joinClose.addEventListener('click', (e) => {
-        $joinModalBg.style.display = 'none';
-        $joinPopup.style.display = 'none';
+            // 팝업창 오픈
+            const $joinModalBg = get('#modal .background');
+            const $joinPopup = get('#modal .popup');
+            $emailNextBtn.addEventListener('click', (e) => {
+                $joinModalBg.style.display = 'block';
+                $joinPopup.style.display = 'block';
+            });
+
+            // 팝업끄기
+            const $joinClose = get('#modal .popup .close');
+            $joinClose.addEventListener('click', (e) => {
+                $joinModalBg.style.display = 'none';
+                $joinPopup.style.display = 'none';
+            });
+        }
     });
 };
 
