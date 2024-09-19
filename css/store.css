@@ -1,0 +1,232 @@
+/* ------------------------------------------------------------introduce */
+.introduce {
+    width: 100%;
+    /* ******************************** */
+    margin-top: 16.667vw;
+    /* ㄴ헤더 들어가는 서브페이지에 필수 */
+}
+/* .intro-visual */
+.introduce .intro-visual {
+    margin-top: 4.44vw;
+    width: 100vw;
+    height: 58.33vw;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('../images/store/intro_visual.png');
+    background-size: cover;
+    position: relative;
+}
+
+/* reservation */
+.introduce .reservation {
+    margin: 5.56vw auto;
+    border: 0.28vw solid var(--font-color-grey-2);
+    border-radius: 1.39vw;
+    display: flex;
+    width: 83.33vw;
+    height: 22.22vw;
+    padding: 2.78vw 4.17vw;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+.introduce .reservation .move {
+    font-size: 5vw;
+    font-weight: 700;
+    position: relative;
+}
+.introduce .reservation .move:first-child:after {
+    content: '';
+    display: block;
+    width: 0.56vw;
+    height: 9.72vw;
+    background: var(--font-color-grey-2);
+    position: absolute;
+    top: -1.39vw;
+    right: -5vw;
+}
+.introduce .reservation .move a i {
+    margin-right: 1.39vw;
+    font-size: 5.56vw;
+}
+
+.introduce .inner {
+    width: 100%;
+}
+/* box1 */
+.introduce .inner .first-text {
+    margin-top: 13.89vw;
+    text-align: center;
+}
+.introduce .inner .first-text h2 {
+    font-size: 8.33vw;
+    font-weight: 800;
+    margin-bottom: 9.72vw;
+}
+.introduce .inner .first-text p {
+    font-size: 3.33vw;
+    font-weight: 700;
+}
+
+/* box2 */
+.introduce .inner .sub-text-image {
+    margin-top: 16.67vw;
+    padding: 2.78vw;
+}
+.introduce .inner .sub-text-image li {
+    display: block;
+    margin-bottom: 22.22vw;
+    display: flex;
+    position: relative;
+}
+.introduce .inner .sub-text-image li img {
+    width: 33.33vw;
+    height: 27.78vw;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.introduce .inner .sub-text-image li .image-explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4.17vw;
+}
+.introduce .inner .sub-text-image li .image-explain h3 {
+    font-size: 5vw;
+    font-weight: 700;
+    margin-bottom: 2.78vw;
+}
+.introduce .inner .sub-text-image li .image-explain p {
+    font-size: 2.78vw;
+    font-weight: 500;
+}
+
+.introduce .inner .sub-text-image li:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+}
+.introduce .inner .sub-text-image li:nth-child(2) .image-explain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 4.17vw;
+    text-align: right;
+}
+
+/* box3 */
+.introduce .inner .store-experience {
+    width: 100%;
+    height: 111.11vw;
+    position: relative;
+    padding-bottom: 13.89vw;
+    margin-bottom: 27.78vw;
+}
+.introduce .inner .store-experience h2 {
+    text-align: center;
+    font-size: 6.94vw;
+    font-weight: 800;
+    margin-bottom: 8.33vw;
+}
+.introduce .inner .store-experience img {
+    width: 100%;
+}
+.introduce .inner .store-experience .explain-box {
+    width: 94.44vw;
+    margin: auto;
+    border-radius: 1.39vw;
+    background: #fff;
+    box-shadow: 0 2.78vw 8.33vw rgba(66, 66, 66, 0.12);
+    box-sizing: border-box;
+    padding: 8.33vw 0;
+    position: absolute;
+    top: 69.44vw;
+    left: 2.78vw;
+}
+.introduce .inner .store-experience .explain-box h3 {
+    font-size: 4.17vw;
+    font-weight: 800;
+    margin-left: 5.56vw;
+    text-align: left;
+}
+.introduce .inner .store-experience .explain-box p {
+    text-align: left;
+    margin-top: 2.78vw;
+    font-size: 4.17vw;
+    color: var(--font-color-grey-2);
+    margin-left: 5.56vw;
+}
+
+/* box4 */
+.introduce .store-store {
+    width: 100%;
+    background: var(--background-color-1);
+    margin-top: 8.33vw;
+    position: relative;
+    margin: auto;
+    border-radius: 1.39vw;
+    box-sizing: border-box;
+    padding: 5.56vw 0;
+    margin-bottom: 8.33vw;
+    overflow: hidden;
+}
+.introduce .store-store h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 8.33vw;
+    margin-bottom: 5.56vw;
+}
+
+.introduce .store-store .to-store {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.78vw;
+}
+.introduce .store-store .to-store li {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 2.78vw;
+}
+.introduce .store-store .to-store li img {
+    border-radius: 1.39vw;
+    box-sizing: border-box;
+    width: 94.44vw;
+    height: 50vw;
+    display: block;
+}
+.introduce .store-store .to-store li span {
+    font-size: 4.17vw;
+    font-weight: 700;
+    position: absolute;
+    top: 38.89vw;
+    left: 5.56vw;
+    color: #fff;
+    display: block;
+}
+.introduce .store-store .to-store li .to-store-name {
+    font-size: 5vw;
+    font-weight: 700;
+    display: block;
+    margin: 4.17vw 1.39vw 2.78vw;
+}
+.introduce .store-store .to-store li .to-store-address {
+    color: var(--font-color-grey-1);
+    font-size: 3.61vw;
+    margin-left: 1.39vw;
+}
+.introduce .store-store .prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5.56vw;
+    z-index: 30;
+    font-size: 6.94vw;
+}
+.introduce .store-store .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5.56vw;
+    z-index: 30;
+    font-size: 6.94vw;
+}

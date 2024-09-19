@@ -1,0 +1,396 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 16.667vw;
+    padding: 7.222vw 3.778vw 5.556vw 4.556vw;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 1.111vw 2.778vw #00000010;
+    z-index: 1000;
+}
+#header.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#header a {
+    width: 25vw;
+    margin-top: 1.111vw;
+}
+#header a .logo {
+    width: 25.556vw;
+    height: 6.111vw;
+}
+#header a .logo img {
+    width: 100%;
+    height: 100%;
+}
+#header a .navi {
+    font-size: 4.444vw;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.667vw;
+}
+#header .bar {
+    font-size: 6.667vw;
+    cursor: pointer;
+    padding: 2.778vw;
+    box-sizing: border-box;
+}
+#header .prev {
+    font-size: 6.667vw;
+    cursor: pointer;
+    padding: 2.778vw;
+    box-sizing: border-box;
+}
+
+.header_menu {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 8.333vw 0vw 0vw;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: 0.4s;
+}
+.header_menu.active {
+    transform: translateX(0%);
+}
+.header_menu .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8.333vw;
+    padding: 0 5.556vw;
+}
+.header_menu .top h2 {
+    font-weight: 700;
+    font-size: 5.556vw;
+    cursor: pointer;
+}
+.header_menu .top h2 i {
+    margin-left: 3.333vw;
+    font-size: 6.667vw;
+    vertical-align: -0.556vw;
+}
+.header_menu .top button {
+    width: 8.333vw;
+    height: 8.333vw;
+    border: none;
+    background-color: #dfdfdf;
+    border-radius: 8.333vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.header_menu .top button i {
+    font-size: 5vw;
+    color: #fff;
+}
+.header_menu .quick {
+    margin-bottom: 5.556vw;
+}
+.header_menu .quick ul {
+    display: flex;
+    justify-content: space-between;
+}
+.header_menu .quick ul li {
+    width: 33.333%;
+}
+.header_menu .quick ul li a {
+    width: 100%;
+    padding: 0 5.556vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header_menu .quick ul li a i {
+    font-size: 7.778vw;
+}
+.header_menu .quick ul li a p {
+    margin-top: 2.778vw;
+    font-size: 3.611vw;
+    word-break: keep-all;
+    text-align: center;
+    line-height: 1.3;
+}
+.header_menu nav {
+    width: 100%;
+    display: flex;
+    border-top: 0.278vw solid var(--border-color-2);
+    border-bottom: 0.278vw solid var(--border-color-2);
+}
+.header_menu nav .left {
+    width: 38%;
+    background-color: var(--background-color-2);
+    height: 105.556vw;
+    box-sizing: border-box;
+}
+.header_menu nav .left ul {
+    background-color: var(--background-color-2);
+}
+.header_menu nav .left ul li {
+    cursor: pointer;
+    padding: 5.556vw 5.556vw;
+    font-size: 4.167vw;
+    background-color: var(--background-color-2);
+}
+.header_menu nav .left ul li.active {
+    background-color: #fff;
+    font-weight: 700;
+}
+.header_menu nav .right {
+    height: 105.556vw;
+    width: 62%;
+    background-color: #fff;
+}
+.header_menu nav .right ul {
+    display: none;
+    background-color: #fff;
+}
+.header_menu nav .right ul.active {
+    display: block;
+}
+.header_menu nav .right ul li {
+    font-size: 3.889vw;
+    font-weight: 500;
+    border-bottom: 0.278vw solid var(--border-color-1);
+}
+.header_menu nav .right ul li a {
+    padding: 5.556vw;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_menu nav .right ul li a i {
+    font-size: 5vw;
+    color: var(--font-color-grey-2);
+}
+.header_menu .tel {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 0.278vw solid var(--border-color-2);
+}
+.header_menu .tel ul {
+    display: flex;
+}
+.header_menu .tel ul li {
+    background-color: #fff;
+    width: 33.333%;
+    padding: 0 3.333vw;
+    height: 27.778vw;
+    box-sizing: border-box;
+    position: relative;
+}
+.header_menu .tel ul li:not(:last-child):after {
+    content: '';
+    width: 0vw;
+    height: 16.667vw;
+    margin-top: 5.556vw;
+    border-right: 0.278vw solid var(--border-color-1);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header_menu .tel ul li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.header_menu .tel ul li a i {
+    font-size: 7.222vw;
+    color: var(--font-color-grey-2);
+}
+.header_menu .tel ul li a img {
+    width: 6.111vw;
+}
+.header_menu .tel ul li a p {
+    margin-top: 1.111vw;
+    font-size: 3.611vw;
+    font-weight: 500;
+    color: var(--font-color-grey-1);
+}
+.header_menu .tel ul li a p span {
+    display: block;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--main-color);
+    font-size: 3.889vw;
+}
+.header_menu .notice {
+    padding: 5.556vw;
+}
+.header_menu .notice .box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5.556vw 5.556vw 3.333vw;
+    border-radius: 2.778vw;
+
+    background-color: var(--background-color-2);
+}
+.header_menu .notice .box h3 {
+    font-size: 4.167vw;
+    font-weight: 700;
+}
+
+.header_menu .notice .swiper {
+    margin-top: 3.333vw;
+    width: 100%;
+    height: 22.222vw;
+    position: relative;
+}
+
+.header_menu .notice .swiper-slide {
+    text-align: center;
+    text-align: left;
+    font-size: 3.889vw;
+}
+.header_menu .notice .swiper-slide p:last-child {
+    font-size: 3.611vw;
+    color: var(--font-color-grey-1);
+}
+.header_menu .notice .swiper-pagination {
+    width: 8.056vw;
+    font-size: 3.889vw;
+    color: var(--font-color-grey-2);
+}
+
+/* //header */
+
+#footer {
+    width: 100%;
+    padding: 5.556vw;
+    box-sizing: border-box;
+}
+#footer .menu {
+}
+#footer .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.778vw;
+}
+#footer .menu ul li {
+    line-height: 8.333vw;
+}
+#footer .menu ul li a {
+    font-size: 3.889vw;
+    color: var(--font-color-grey-1);
+    font-weight: 500;
+}
+#footer .menu ul li.b a {
+    font-weight: 700;
+    color: #819197;
+}
+#footer .menu ul li.family select {
+    padding: 1.111vw 1.667vw;
+    font-size: 3.333vw;
+    border-radius: 1.111vw;
+    font-weight: 500;
+    border: none;
+    color: var(--font-color-grey-1);
+    background-color: var(--background-color-2);
+    appearance: none;
+    background-image: url(../images/common/arr_down2.png);
+    background-position: 25vw;
+    background-repeat: no-repeat;
+    background-size: 2.778vw;
+    outline: none;
+}
+#footer .menu ul li.family select i {
+    vertical-align: middle;
+    padding-left: 5vw;
+}
+#footer .menu ul li.global a i {
+    font-size: 6.111vw;
+    vertical-align: middle;
+}
+#footer .sns {
+    margin: 10vw 0;
+}
+#footer .sns ul {
+    display: flex;
+    gap: 2.778vw;
+}
+#footer .sns ul li {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 11.111vw;
+    border: 0.278vw solid var(--border-color-2);
+}
+#footer .sns ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#footer .desc {
+}
+#footer .desc button {
+    border: none;
+    background: none;
+    font-size: 4.167vw;
+    font-weight: 800;
+    padding-left: 0;
+}
+#footer .desc button i {
+    transform: rotate(0deg);
+    transition: 0.2s;
+    margin-left: 2.778vw;
+}
+#footer .desc.active button i {
+    transform: rotate(180deg);
+}
+/* 누르면 class height i deg조정 */
+#footer .desc div {
+    display: flex;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+#footer .desc.active div {
+    height: 44.444vw;
+}
+#footer .desc div p {
+    font-size: 3.611vw;
+    color: var(--font-color-grey-1);
+}
+#footer .copy {
+    margin-top: 3.333vw;
+    font-size: 3.611vw;
+    color: var(--font-color-grey-2);
+}
+#footer .isms {
+    display: flex;
+    gap: 6.667vw;
+    margin-top: 8.889vw;
+    align-items: center;
+}
+#footer .isms li {
+}
+#footer .isms li img {
+    width: 8.889vw;
+}
+#footer .isms li:nth-child(2) img {
+    width: 7.778vw;
+}
+/* //footer */

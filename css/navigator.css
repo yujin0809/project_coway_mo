@@ -1,0 +1,36 @@
+.nav {
+    padding: 17px 5px 0;
+}
+
+.nav .inner {
+    display: flex;
+}
+
+.nav .inner span {
+    display: flex;
+}
+
+.nav .inner span,
+.nav .inner a {
+    font-weight: 400;
+    font-size: 12px;
+    color: #90a0a6;
+}
+
+.nav .inner span a:hover {
+    text-decoration: none;
+}
+
+.nav .inner span:nth-child(1):before {
+    display: none;
+}
+
+.nav .inner span::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: 12px;
+    background-image: url(/images/common/arr_right1.png);
+}

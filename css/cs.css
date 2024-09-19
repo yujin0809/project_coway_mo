@@ -1,0 +1,327 @@
+.cs-home {
+    /* ******************************** */
+    margin-top: 16.667vw;
+    /* ㄴ헤더 들어가는 서브페이지에 필수 */
+}
+.cs-home .visual {
+    height: 50vw;
+    background-image: url(../images/cs/cs_main_top_1.png);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 79.167vw;
+}
+.cs-home .visual h2 {
+    position: absolute;
+    color: #fff;
+    font-size: 6.111vw;
+    font-weight: 700;
+    left: 6.111vw;
+    top: 8.889vw;
+}
+.cs-home .visual h2 span {
+    font-size: 4.167vw;
+    display: block;
+    margin-bottom: 1.111vw;
+    font-weight: 500;
+    color: #ffffffee;
+}
+
+.cs-home .visual .menu {
+    z-index: 10;
+    position: absolute;
+    width: 88.889vw;
+    height: 66.667vw;
+    box-sizing: border-box;
+    padding: 5.556vw 5.556vw;
+    background-color: #fff;
+    border: 0.278vw solid var(--border-color-2);
+    box-shadow: 0vw 0.556vw 1.111vw #00000020;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -50vw;
+    border-radius: 1.389vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.cs-home .visual .menu .menu-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 80.556vw;
+    transform: translateY(-22.222vw);
+    box-shadow: 0vw 0vw 0.556vw 2.778vw #ffffff inset;
+}
+.cs-home .visual .menu .menu-slide.animated {
+    transition: 0.5s ease-in-out;
+}
+.cs-home .visual .menu .menu-slide {
+    z-index: -1;
+    position: absolute;
+    top: 47.222vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.cs-home .visual .menu li {
+    font-size: 3.889vw;
+    font-weight: 500;
+    color: var(--font-color-grey-1);
+    transition: 0.2s;
+    padding: 3.333vw 0;
+}
+.cs-home .visual .menu li.active {
+    color: var(--main-color);
+    font-weight: 700;
+}
+.cs-home .visual .more {
+    width: 88.889vw;
+    padding: 3.333vw;
+    border-radius: 0.833vw;
+    box-sizing: border-box;
+    position: absolute;
+    left: 5.556vw;
+    bottom: -69.444vw;
+    background-color: var(--background-color-3);
+}
+.cs-home .visual .more a {
+    color: #fff;
+    font-size: 3.889vw;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cs-home .visual .more a i {
+    vertical-align: 0vw;
+}
+
+.cs-home .quick {
+    margin-bottom: 8.889vw;
+    border-top: 0.278vw solid var(--border-color-2);
+}
+.cs-home .quick h2 {
+    padding: 5.556vw 5.556vw 4.444vw;
+    font-weight: 700;
+    font-size: 5vw;
+}
+.cs-home .quick .list {
+    display: flex;
+    padding: 0 5.556vw;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 3.333vw;
+}
+.cs-home .quick .list li {
+    width: 50%;
+}
+.cs-home .quick .list li a {
+    display: block;
+    width: 100%;
+    height: 33.333vw;
+    border-radius: 0.833vw;
+    background-color: var(--background-color-2);
+    position: relative;
+}
+.cs-home .quick .list li a p {
+    position: absolute;
+    top: 5.556vw;
+    left: 5.556vw;
+    font-size: 3.889vw;
+    font-weight: 500;
+}
+.cs-home .quick .list li a img {
+    width: 11.111vw;
+    position: absolute;
+    bottom: 5.556vw;
+    right: 5.556vw;
+}
+
+.cs-home .product {
+    margin-bottom: 8.889vw;
+    border-top: 0.278vw solid var(--border-color-2);
+}
+.cs-home .product h2 {
+    padding: 5.556vw 5.556vw 4.444vw;
+    font-weight: 700;
+    font-size: 5vw;
+}
+.cs-home .product .list {
+    margin: 0 5.556vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.833vw;
+    overflow: hidden;
+}
+.cs-home .product .list li {
+    width: 100%;
+    padding: 4.444vw 5.556vw;
+    box-sizing: border-box;
+    background-color: var(--background-color-2);
+    border-bottom: 0.278vw solid var(--border-color-2);
+}
+.cs-home .product .list li:last-child {
+    border: none;
+}
+.cs-home .product .list li a {
+    font-size: 3.889vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cs-home .product .list li a i {
+    font-size: 5vw;
+    color: var(--font-color-grey-1);
+}
+
+.cs-home .call {
+    margin-bottom: 8.889vw;
+    border-top: 0.278vw solid var(--border-color-2);
+}
+.cs-home .call .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5.556vw;
+}
+.cs-home .call .top h2 {
+    font-size: 5vw;
+    padding: 5.556vw 5.556vw 4.444vw;
+    font-weight: 700;
+}
+.cs-home .call .top p {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 4.444vw;
+}
+.cs-home .call .box {
+    border: 0.556vw solid var(--border-color-2);
+    margin: 0 5.556vw;
+    border-radius: 0.833vw;
+    padding: 5.556vw;
+    box-sizing: border-box;
+}
+.cs-home .call .box > p:first-of-type {
+    font-size: 4.167vw;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.cs-home .call .box > p:first-of-type span i {
+    font-size: 5.556vw;
+    margin-right: 1.111vw;
+    vertical-align: -0.833vw;
+}
+.cs-home .call .box > p:first-of-type span:last-child {
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 4.167vw;
+}
+.cs-home .call .box div {
+    margin: 3.333vw 0;
+    display: flex;
+    justify-content: space-between;
+}
+.cs-home .call .box div p {
+    font-size: 3.889vw;
+    color: var(--font-color-grey-1);
+    font-weight: 500;
+}
+.cs-home .call .box > p:last-of-type {
+    font-size: 3.611vw;
+    color: var(--font-color-grey-2);
+}
+
+.cs-home .notice {
+    margin-bottom: 8.333vw;
+    border-top: 0.278vw solid var(--border-color-2);
+}
+.cs-home .notice h2 {
+    padding: 5.556vw 5.556vw 4.444vw;
+    font-weight: 700;
+    font-size: 5vw;
+}
+.cs-home .notice .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5.556vw;
+    background-color: var(--background-color-2);
+    padding: 5.556vw;
+    height: 25vw;
+    border-radius: 0.833vw;
+    box-sizing: border-box;
+}
+.cs-home .notice .box .slide {
+}
+.cs-home .notice .box .slide strong {
+    display: block;
+    font-size: 3.889vw;
+    width: 58.333vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.cs-home .notice .box .slide p {
+    font-size: 3.611vw;
+    color: var(--font-color-grey-1);
+}
+.cs-home .notice .box .right {
+    display: flex;
+    align-items: center;
+}
+.cs-home .notice .box .right p {
+    font-size: 3.889vw;
+    color: var(--font-color-grey-1);
+}
+.cs-home .notice .box .right button {
+    border: none;
+    background: none;
+    font-size: 5vw;
+    color: #969ea1;
+    padding: 0;
+    padding-left: 1.667vw;
+}
+.cs-home .notice .box .right button i {
+    vertical-align: -0.389vw;
+}
+
+.cs-home .notice .box .slide strong.fade-in,
+.cs-home .notice .box .slide p.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.cs-home .notice .more {
+    margin: 0 5.556vw;
+    margin-top: 5.556vw;
+    width: 88.889vw;
+    padding: 3.333vw;
+    border-radius: 0.833vw;
+    box-sizing: border-box;
+    background-color: var(--background-color-3);
+}
+.cs-home .notice .more a {
+    color: #fff;
+    font-size: 3.889vw;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.cs-home .notice .more a i {
+    vertical-align: 0vw;
+}

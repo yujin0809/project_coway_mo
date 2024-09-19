@@ -1,0 +1,1456 @@
+.wrap {
+    width: 100%;
+}
+/* -------------------------------------------------- */
+/* lifeElc */
+#lifeElc {
+    /* ******************************** */
+    margin-top: 16.667vw;
+    /* ㄴ헤더 들어가는 서브페이지에 필수 */
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    /* margin-bottom: 33.33vw; */
+}
+
+#lifeElc .mainImg {
+    position: relative;
+    width: 100%;
+    height: 72.22vw;
+    margin-bottom: 11.11vw;
+    user-select: none;
+}
+
+#lifeElc .imgInfo {
+    position: absolute;
+    width: 83.33vw;
+    height: 83.33vw;
+    left: 13.89vw;
+    top: 32.67vw;
+}
+
+#lifeElc .imgInfo .h1 {
+    margin-bottom: 2.78vw;
+    font-size: 4.44vw;
+    font-weight: 700;
+    line-height: 1.36;
+    color: white;
+    user-select: none;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo .h1.on {
+    transition: 1s;
+    transform: translateX(-5%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo .h2 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    line-height: 1.6;
+    color: white;
+    user-select: none;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo .h2.on {
+    transition: 1s;
+    transform: translateX(-5%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo div {
+    font-size: 3.89vw;
+    font-weight: 700;
+    background: #ffffff;
+    border-radius: 1.11vw;
+    user-select: none;
+    align-content: center;
+    text-align: center;
+    height: 11.11vw;
+    width: 27.78vw;
+    margin-top: 5.56vw;
+    margin-left: 5.56vw;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+#lifeElc .imgInfo div.on {
+    transition: 1s;
+    transform: translateX(-35%);
+    opacity: 1;
+}
+
+#lifeElc .imgInfo div a {
+    display: block;
+}
+
+#lifeElc .contents {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+#lifeElc .contents .filter {
+    margin-left: 5.56vw;
+}
+
+#lifeElc .contents .filter p {
+    font-size: 4.17vw;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#lifeElc .contents .filter p img {
+    padding-left: 2.78vw;
+}
+
+#lifeElc .contents .filter p .arrow {
+    padding-left: 22.22vw;
+    height: 2.78vw;
+    width: 4.17vw;
+    cursor: pointer;
+}
+
+#lifeElc .contents .filter .filterReset {
+    position: relative;
+    z-index: 10;
+    width: fit-content;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5.56vw;
+}
+
+#lifeElc .contents .filter .category {
+    margin-top: 3.333vw;
+    padding: 0 5.556vw 0 0;
+    border: 0.28vw solid #f2f4f5;
+    transition: height 1s;
+    width: 100%;
+    box-sizing: border-box;
+    height: 16.67vw;
+}
+
+#lifeElc .contents .filter .category p {
+    display: none;
+}
+
+#lifeElc .contents .filter .category.active {
+    transition: height 1s;
+    height: 2.78vw;
+}
+
+#lifeElc .contents .filter .category ul {
+    width: 100%;
+    padding: 2.78vw;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    max-height: 55.56vw;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lifeElc .contents .filter .category ul.active {
+    max-height: 0;
+    opacity: 0;
+}
+
+#lifeElc .contents .filter .category ul li {
+    padding: 2.78vw;
+    font-size: 4.17vw;
+    color: #90a0a6;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] {
+    position: absolute;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] + label {
+    position: relative;
+    display: inline-block;
+    text-indent: 11.11vw;
+    cursor: pointer;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox'] + label::after {
+    text-indent: 0.56vw;
+    content: '';
+    background: url(../images/common/ico_check_off.png) no-repeat 0 0 / 6.94vw auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6.94vw;
+    height: 6.94vw;
+}
+
+#lifeElc .contents .filter .category ul li input[type='checkbox']:checked + label::after {
+    text-indent: 0.56vw;
+    content: '';
+    background: url(../images/common/ico_check_on.png) no-repeat 0 0 / 6.94vw auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 6.94vw;
+    height: 6.94vw;
+}
+
+#lifeElc .contents .itemList {
+    position: relative;
+    width: 100%;
+}
+
+#lifeElc .contents .itemList .listUl {
+    width: 100%;
+    box-sizing: border-box;
+    display: flow-root;
+}
+
+#lifeElc .contents .itemList > div:first-of-type {
+    display: flex;
+    width: 100%;
+    padding-top: 4.17vw;
+    padding-bottom: 4.17vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#lifeElc .contents .itemList p {
+    width: 100%;
+    height: 5.56vw;
+    font-size: 4.17vw;
+}
+
+#lifeElc .contents .itemList .totalcnt {
+    padding-left: 4.17vw;
+}
+
+#lifeElc .contents .itemList .sort {
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+    width: 55.56vw;
+    height: 5.56vw;
+    font-size: 4.17vw;
+}
+
+#lifeElc .contents .itemList .sort img {
+    padding: 1.94vw;
+    height: 2.78vw;
+    width: 4.17vw;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList .sortList {
+    display: none;
+    position: absolute;
+    top: 11.11vw;
+    left: 61.11vw;
+    width: 33.33vw;
+    border: 0.56vw solid #1b2529;
+    border-radius: 1.11vw;
+    font-size: 4.17vw;
+    background-color: white;
+    z-index: 1000;
+}
+
+#lifeElc .contents .itemList .sortList ul li {
+    align-items: center;
+    height: 5.56vw;
+    padding: 2.78vw;
+    font-size: 4.44vw;
+    line-height: 1;
+    user-select: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList .sortList ul li:hover {
+    color: var(--main-color);
+}
+
+#lifeElc .contents .itemList ul .listLi {
+    width: 100%;
+    padding: 4.17vw;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#lifeElc .contents .itemList ul .listLi .top {
+    background: var(--border-color-1);
+    display: flex;
+    padding: 5.56vw;
+    font-size: 3.89vw;
+    font-weight: bold;
+    border-top-right-radius: 1.39vw;
+    border-top-left-radius: 1.39vw;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .new {
+    color: var(--main-color);
+    width: 8.33vw;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .point {
+    display: block;
+    width: 2.78vw;
+    height: 0.83vw;
+    margin: 2.78vw 1.39vw 0;
+    background-color: #bec8cc;
+    border-radius: 50%;
+}
+
+#lifeElc .contents .itemList ul .listLi .top .pro {
+    color: var(--main-color);
+    text-align: end;
+}
+
+#lifeElc .contents .itemList ul .listLi .midPhoto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--border-color-1);
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .circle {
+    border-radius: 2.78vw;
+    height: 5.56vw;
+    width: 5.56vw;
+    margin: 1.39vw;
+    background: #fff;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .circle.active {
+    border: 0.28vw solid #000;
+}
+
+#lifeElc .contents .itemList ul .listLi .midColor .color,
+#lifeElc .contents .itemList ul .listLi .midColor .colors {
+    position: relative;
+    top: -0.83vw;
+    left: -0.83vw;
+    border-radius: 2.78vw;
+    height: 4.44vw;
+    width: 4.44vw;
+    margin: 1.39vw;
+    box-sizing: border-box;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm {
+    padding: 5.56vw;
+    background: var(--border-color-1);
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .model {
+    font-size: 3.89vw;
+    color: #90a0a6;
+    line-height: 1;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .name {
+    font-size: 6.67vw;
+    font-weight: 700;
+    color: #1b2529;
+    line-height: 1.4;
+    margin-bottom: 19.44vw;
+    cursor: pointer;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starPoint {
+    font-size: 3.89vw;
+    margin-right: 1.39vw;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starPoint img {
+    padding-right: 1.39vw;
+    width: 5.56vw;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .starCnt {
+    font-size: 3.89vw;
+    color: var(--font-color-grey-2);
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv,
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.78vw;
+    padding-bottom: 1.39vw;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv .buy,
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv .rent {
+    font-size: 4.17vw;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .buyDiv .purPrice {
+    margin-right: 2.78vw;
+    font-size: 3.89vw;
+    font-weight: 400;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .rentDiv .rentPrice {
+    font-size: 3.89vw;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn {
+    position: relative;
+    left: 53%;
+    margin-top: 8.33vw;
+    margin-bottom: 8.33vw;
+    width: 38.89vw;
+    height: 13.89vw;
+    border: 0.28vw solid var(--border-color-2);
+    background-color: #fff;
+    border-radius: 1.11vw;
+    color: var(--font-color-grey-1);
+    font-size: 3.89vw;
+    font-weight: 400;
+    cursor: pointer;
+    padding-right: 6.94vw;
+    text-align: end;
+    display: none;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn.active {
+    border: 0.28vw solid var(--font-color);
+    color: #ffffff;
+    background-color: var(--font-color);
+    cursor: no-drop;
+}
+
+#lifeElc .contents .itemList ul .listLi .btm .compareBtn::before {
+    text-indent: 0.56vw;
+    content: '';
+    background: url(../images/common/ico_check1.png) no-repeat 0 0 / 4.17vw auto;
+    position: absolute;
+    left: 8.33vw;
+    top: 5vw;
+    width: 4.17vw;
+    height: 3.61vw;
+}
+
+#lifeElc .compareDiv {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #1b2529;
+    transition: 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+    z-index: 300;
+}
+
+#lifeElc .compareDiv .compareCntDiv {
+    margin: 0 auto;
+    width: 388.89vw;
+    height: 19.44vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+#lifeElc .compareDiv .compareShowDiv {
+    margin: 0 auto;
+    width: 388.89vw;
+    height: 55.56vw;
+    display: none;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul {
+    display: flex;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep {
+    margin: 4.17vw 4.17vw 4.17vw 0;
+    border-radius: 1.11vw;
+    align-content: center;
+    text-align: left;
+    height: 33.33vw;
+    width: 79.17vw;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .noCom {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .Com {
+    position: relative;
+    background: #ffffff;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .comment {
+    position: relative;
+    font-size: 3.89vw;
+    margin-left: 22.22vw;
+    color: var(--font-color-grey-1);
+    user-select: none;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .comment::before {
+    content: '';
+    background: url(../images/common/ico_plus3.png) no-repeat 0 0 / 6.39vw auto;
+    width: 6.39vw;
+    height: 6.39vw;
+    position: absolute;
+    left: -23%;
+    bottom: 33%;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .closeBtn {
+    content: '';
+    background: url(../images/common/ico_close3.png) no-repeat 0 0 / 5vw auto;
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 89.5%;
+    bottom: 75%;
+    cursor: pointer;
+    margin: 1.39vw;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep img {
+    width: 25vw;
+    height: 25vw;
+    margin-left: 8.33vw;
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .model {
+    position: absolute;
+    bottom: 57%;
+    left: 42%;
+    width: 41.67vw;
+    font-size: 3.89vw;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElc .compareDiv .compareShowDiv ul li .divStep .name {
+    position: absolute;
+    bottom: 17%;
+    left: 42%;
+    width: 33.33vw;
+    height: 13.89vw;
+    font-size: 3.89vw;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+#lifeElc .compareDiv .compareShowDiv button {
+    width: 41.67vw;
+    height: 13.89vw;
+    bottom: 50%;
+    left: 89%;
+    position: relative;
+    color: #fff;
+    border: 0.28vw solid #fff;
+    border-radius: 1.11vw;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    background: #1b2529;
+    font-size: 4.44vw;
+    font-weight: 700;
+}
+
+#lifeElc .compareDiv .compareShowDiv button:hover {
+    transition: 0.3s ease-in;
+    background: #090d0f;
+}
+
+#lifeElc .compareDiv .compareShowDiv .alldelDiv {
+    width: 15.28vw;
+    height: 5.56vw;
+    position: relative;
+    bottom: 22%;
+    left: 81%;
+    color: var(--font-color-grey-1);
+    font-size: 3.89vw;
+    cursor: pointer;
+}
+
+#lifeElc .compareDiv .compareShowDiv .alldelDiv::before {
+    content: '';
+    background: url(../images/common/ico_del1.png) no-repeat 0 0 / 4.17vw auto;
+    width: 4.17vw;
+    height: 4.17vw;
+    position: absolute;
+    left: -39%;
+    bottom: 17%;
+}
+
+/* -------------------------------------------------- */
+/* lifeElcDetail */
+
+.fnt_gray {
+    color: var(--font-color-grey-1);
+}
+
+.fnt_sky {
+    color: var(--main-color);
+}
+
+#lifeElcDetail {
+    /* ******************************** */
+    margin-top: 16.667vw;
+    /* ㄴ헤더 들어가는 서브페이지에 필수 */
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv {
+    margin: 0 auto;
+    display: flow;
+}
+
+#lifeElcDetail .leftDiv {
+    width: 180.56vw;
+    margin-top: 11.11vw;
+    margin-bottom: 11.11vw;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .mainImg {
+    width: 100vw;
+    height: 100vw;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg {
+    padding-left: 5.556vw;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub {
+    padding: 2.78vw;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub.active {
+    box-shadow: 0 0 0 0.56vw inset;
+    border-radius: 1.11vw;
+}
+
+#lifeElcDetail .detailDiv .leftDiv .subImg .sub img {
+    width: 19.44vw;
+    height: 19.44vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv {
+    width: 152.78vw;
+    margin-top: 11.11vw;
+    margin-bottom: 11.11vw;
+    padding-left: 2vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info {
+    width: 80vw;
+    height: 57.67vw;
+    background-color: #ffffff;
+    border-top-left-radius: 2.22vw;
+    border-top-right-radius: 2.22vw;
+    padding: 8.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .new {
+    color: var(--main-color);
+    font-size: 4.17vw;
+    font-weight: bold;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .point.on {
+    position: absolute;
+    display: block;
+    width: 1.39vw;
+    height: 1.39vw;
+    margin: 2.78vw 1.39vw 0;
+    background-color: #bec8cc;
+    border-radius: 50%;
+    top: 80.8%;
+    left: 18.8%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .best {
+    font-size: 4.17vw;
+    font-weight: bold;
+    margin-left: 2.22vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .name {
+    margin-top: 5.56vw;
+    font-size: 8.89vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .model {
+    display: inline;
+    margin-right: 2.22vw;
+    font-size: 4.17vw;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .starPoint {
+    font-size: 4.17vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .starPoint img {
+    padding-top: 0.56vw;
+    padding-right: 1.39vw;
+    width: 5vw;
+    height: 5vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .info .starCnt {
+    margin-left: 1.39vw;
+    font-size: 3.89vw;
+    color: var(--font-color-grey-2);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option {
+    width: 80vw;
+    height: 25vw;
+    background-color: #ffffff;
+    border-bottom-left-radius: 2.22vw;
+    border-bottom-right-radius: 2.22vw;
+    padding: 8.33vw;
+    border-top: 0.28vw solid var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorComment {
+    margin-bottom: 5vw;
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .color {
+    position: absolute;
+    right: 9%;
+    top: 111.5%;
+    font-size: 4.17vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList {
+    display: flex;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li {
+    width: 11.11vw;
+    height: 11.11vw;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: 2.78vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li.active {
+    border: 0.28vw solid black;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .option .colorList li .circle {
+    position: relative;
+    top: 8%;
+    left: 8%;
+    border-radius: 50%;
+    width: 8.89vw;
+    height: 8.89vw;
+    box-sizing: border-box;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type {
+    width: 96vw;
+    height: 13.89vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type .rentType,
+#lifeElcDetail .detailDiv .rightDiv .Type .buyType {
+    width: 70.83vw;
+    text-align: center;
+    height: 100%;
+    align-content: center;
+    font-size: 3.89vw;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: #495154;
+    border-top-left-radius: 2.22vw;
+    border-top-right-radius: 2.22vw;
+    border-bottom: 0.56vw solid black;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .Type .rentType.active,
+#lifeElcDetail .detailDiv .rightDiv .Type .buyType.active {
+    border: 0.56vw solid #000;
+    border-top-left-radius: 2.22vw;
+    border-top-right-radius: 2.22vw;
+    border-bottom: none;
+    font-size: 4.72vw;
+    color: black;
+    background-color: white;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent,
+#lifeElcDetail .detailDiv .rightDiv .buy {
+    width: 78.4vw;
+    padding: 8.33vw;
+    background: white;
+    border: 0.56vw solid #000;
+    border-top: none;
+    border-bottom-left-radius: 2.22vw;
+    border-bottom-right-radius: 2.22vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy {
+    display: none;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 {
+    background-color: var(--border-color-1);
+    border-top-left-radius: 2.22vw;
+    border-top-right-radius: 2.22vw;
+    padding-bottom: 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .title {
+    font-weight: 700;
+    font-size: 3.89vw;
+    padding: 4.44vw 4.44vw 0 4.44vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist {
+    padding: 4.44vw 4.44vw 0 8.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist span {
+    font-size: 3.89vw;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist::before {
+    content: '';
+    display: inline-block;
+    width: 2.78vw;
+    height: 1.94vw;
+    background: url(../images/common/ico_check4.png) no-repeat;
+    background-size: cover;
+    margin-right: 2.22vw;
+    margin-bottom: 0.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .promotion {
+    margin: 5.56vw 5.56vw 0 5.56vw;
+    background-color: var(--background-color-4);
+    padding: 2.78vw 5.56vw;
+    font-size: 4.17vw;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .promotion .promotionPrice {
+    margin-left: 3%;
+    font-size: 4vw;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .registRegist .registPrice {
+    margin-left: 12%;
+    font-size: 3.89vw;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .infoRent {
+    font-size: 3.61vw;
+    font-weight: 500;
+    text-decoration: underline;
+    text-align: end;
+    padding: 0 8.33vw 0 4.44vw;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0 1.39vw;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .infoRent::after {
+    content: '';
+    display: inline-block;
+    width: 4.17vw;
+    height: 4.17vw;
+    vertical-align: top;
+    background: url(../images/common/ico_tooTip2.png) no-repeat 0 0 / 100%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv {
+    background-color: white;
+    width: 50.33vw;
+    padding: 4.72vw 9.72vw 4.72vw 5.83vw;
+    border: 0.56vw solid #1b2529;
+    border-radius: 1.11vw;
+    position: absolute;
+    bottom: -79%;
+    right: 16%;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv p {
+    word-break: keep-all;
+    text-align: justify;
+    padding-bottom: 2.78vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv p::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: -2.22vw;
+    top: 3.33vw;
+    width: 0.83vw;
+    height: 0.83vw;
+    background: url(../images/common/dot_tip.png) no-repeat 0 0 / 100%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top1 .rentRegistDiv button {
+    position: absolute;
+    right: 4.17vw;
+    top: 4.17vw;
+    width: 3.89vw;
+    height: 3.89vw;
+    background: url(../images/common/ico_close2.png) no-repeat 0 0 / 100%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 {
+    background-color: var(--border-color-1);
+    border-bottom-left-radius: 2.22vw;
+    border-bottom-right-radius: 2.22vw;
+    margin-bottom: 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder,
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway {
+    padding: 0 4.44vw 0 8.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'],
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] {
+    position: absolute;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'] + label,
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] + label {
+    position: relative;
+    display: inline-block;
+    text-indent: 8.33vw;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox'] + label::after,
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox'] + label::after {
+    text-indent: 0.56vw;
+    content: '';
+    background: url(../images/common/ico_prdcheck_off.png) no-repeat 0 center / 5.28vw auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6.94vw;
+    height: 6.94vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder input[type='checkbox']:checked + label::after,
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway input[type='checkbox']:checked + label::after {
+    text-indent: 0.56vw;
+    content: '';
+    background: url(../images/common/ico_prdcheck_on.png) no-repeat 0 center / 5.28vw auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6.94vw;
+    height: 6.94vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder span,
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway span {
+    font-size: 3.89vw;
+    font-weight: 500;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .twoMoreOrder .twoMoreOrderPrice {
+    margin-left: 9%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .haveCoway .haveCowayPrice {
+    margin-left: 4.7%;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .addDiscount {
+    margin: 5.56vw;
+    background-color: var(--background-color-4);
+    padding: 2.78vw 5.56vw;
+    font-size: 4.17vw;
+    font-weight: 500;
+    justify-content: space-between;
+    display: flex;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .addDiscount .addDiscountPrice {
+    font-size: 4vw;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal {
+    padding: 5.56vw 4.44vw;
+    border-top: 0.28vw solid var(--border-color-2);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal span {
+    font-size: 3.5vw;
+    font-weight: 600;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal .disCountTotalText {
+    color: var(--main-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .top2 .disCountTotal .disCountTotalPrice {
+    color: var(--main-color);
+    font-size: 5vw;
+    font-weight: 600;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType,
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType {
+    background-color: var(--border-color-1);
+    padding: 2.78vw 5.56vw;
+    border-radius: 2.22vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageTypeText,
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType .installTypeText {
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageSelect,
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .rentInstallType .installSelect {
+    font-weight: 700;
+    font-size: 3.89vw;
+    border: none;
+    background-color: var(--border-color-1);
+    text-align: left;
+    width: 47.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .manageType .manageSelect:focus {
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult {
+    padding: 5.56vw 0 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal em {
+    color: var(--main-color);
+    font-size: 3.89vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal .rentText {
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentPriceResult .rentTotal .rentPrice {
+    font-size: 6.39vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.78vw;
+    padding-bottom: 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns button {
+    width: 61.11vw;
+    height: 13.89vw;
+    border-radius: 1.11vw;
+    font-size: 4.44vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentAddBtn {
+    border: 0.28vw solid var(--border-color-2);
+    background: #fff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentAddBtn:hover {
+    border: 0.28vw solid var(--border-color-3);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentBtn {
+    background: var(--main-color);
+    border: 0.28vw solid var(--main-color);
+    color: #ffffff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentBtns .rentBtn:hover {
+    border: 0.28vw solid var(--font-color);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentNotice {
+    border-top: 0.28vw solid var(--border-color-2);
+    padding: 2.78vw 0 2.78vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .rentNotice p {
+    font-size: 3.61vw;
+    color: var(--font-color-grey-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .rent .mid .buyInstallType,
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType {
+    background-color: var(--border-color-1);
+    padding: 2.78vw 5.56vw 2.78vw;
+    border-radius: 2.22vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType {
+    margin-bottom: 2.78vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType .installTypeText {
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyInstallType .installSelect {
+    font-weight: 700;
+    font-size: 3.89vw;
+    border: none;
+    background-color: var(--border-color-1);
+    text-align: left;
+    width: 48.33vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo {
+    border-radius: 1.11vw;
+    margin-top: 5.56vw;
+    padding: 5.56vw 5.56vw 2.78vw;
+    background-color: var(--border-color-1);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount .cardDiscountText1 {
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount .cardDiscountText2 {
+    font-size: 3.33vw;
+    font-weight: 400;
+    margin-left: 1.67vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .cardDiscount {
+    padding-bottom: 3.33vw;
+    margin-bottom: 3.33vw;
+    border-bottom: 0.28vw solid #e5e9eb;
+    display: flex;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .card p {
+    font-size: 3.89vw;
+    font-weight: 400;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .cardDInfo .card p .month {
+    color: #fe7c20;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult {
+    padding: 5.56vw 0 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal .buyText {
+    font-size: 4.17vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal .buyPrice {
+    color: var(--main-color);
+    font-size: 6.39vw;
+    font-weight: 700;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyPriceResult .buyTotal em {
+    color: var(--main-color);
+    font-size: 3.89vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.78vw;
+    padding-bottom: 5.56vw;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns button {
+    width: 61.11vw;
+    height: 13.89vw;
+    border-radius: 1.11vw;
+    font-size: 4.44vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyAddBtn {
+    border: 0.28vw solid var(--border-color-2);
+    background: #fff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyAddBtn:hover {
+    border: 0.28vw solid var(--border-color-3);
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyBtn {
+    background: var(--main-color);
+    border: 0.28vw solid var(--main-color);
+    color: #ffffff;
+    transition: 1s;
+}
+
+#lifeElcDetail .detailDiv .rightDiv .buy .buyBtns .buyBtn:hover {
+    border: 0.28vw solid var(--font-color);
+}
+
+/* -------------------------------------------------- */
+/* waterElc */
+
+/* -------------------------------------------------- */
+/* berexElc */
+
+/* -------------------------------------------------- */
+/* refurb */
+#lifeElc .refurbishment {
+    position: relative;
+    background: #f0f7ec;
+    border-radius: 2.78vw;
+    padding: 16.67vw 16.67vw;
+    display: flex;
+    max-width: 416.67vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#lifeElc .refurbishment .aboutRefurb {
+    border-right: 0.28vw solid #4c993f;
+    padding-right: 11.11vw;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbEng {
+    font-size: 4.17vw;
+    font-weight: bold;
+    color: #4c993f;
+    letter-spacing: normal;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbKor {
+    margin-top: 0.83vw;
+    font-size: 5.56vw;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbComment {
+    margin-top: 5vw;
+    margin-bottom: 8.33vw;
+    color: #5f6669;
+    line-height: 1.6;
+    font-size: 4.44vw;
+}
+
+#lifeElc .refurbishment .aboutRefurb .checkcomment {
+    padding-left: 5.56vw;
+    margin-top: 8.33vw;
+    font-weight: bold;
+    font-size: 4.44vw;
+    line-height: 1.5;
+    text-align: left;
+    color: #4c993f;
+    background: url(../images/common/ico_refurb_chk.png) no-repeat left center / 3.33vw;
+}
+
+#lifeElc .refurbishment .aboutRefurb .refurbBtn {
+    width: 83.33vw;
+    height: 17.22vw;
+    font-size: 4.72vw;
+    background: #4c993f;
+    color: #fff;
+    border-radius: 3.61vw;
+    font-weight: 700;
+    border: none;
+    margin: 4.17vw 0 0;
+    display: block;
+    cursor: pointer;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb {
+    padding-left: 11.11vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .onlyCoway {
+    margin: 0 0 0.83vw;
+    font-size: 4.17vw;
+    color: #4c993f;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .procedure {
+    font-size: 5.56vw;
+    font-weight: 700;
+    position: relative;
+    margin: 0 0 4.17vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep {
+    display: inline-flex;
+    gap: 9.44vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div span {
+    display: inline-block;
+    width: 5.56vw;
+    margin-right: 2.5vw;
+    font-size: 4.17vw;
+    color: #4c993f;
+    border-bottom: 0.28vw solid #4c993f;
+    text-align: center;
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div strong {
+    font-weight: bold;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .refurbMakingStep li div p {
+    margin-top: 1.94vw;
+    font-size: 4.44vw;
+    color: #5f6669;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9.17vw;
+    margin-top: 8.33vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li {
+    position: relative;
+    width: 28.61vw;
+    padding: 4.44vw 3.33vw 12.5vw;
+    color: #90a0a6;
+    border-radius: 1.39vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(1) {
+    background: #fff url('../images/common/ico_refurb_list1.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(2) {
+    background: #fff url('../images/common/ico_refurb_list2.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(3) {
+    background: #fff url('../images/common/ico_refurb_list3.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(4) {
+    background: #fff url('../images/common/ico_refurb_list4.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(5) {
+    background: #fff url('../images/common/ico_refurb_list5.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(6) {
+    background: #fff url('../images/common/ico_refurb_list6.png') no-repeat bottom 3.33vw right 3.89vw / 7.78vw;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li::after {
+    content: '>';
+    position: absolute;
+    top: 50%;
+    right: -5vw;
+    transform: translateY(-50%);
+    font-size: 4.44vw;
+    color: #bec8cc;
+}
+
+#lifeElc .refurbishment .onlyCowayRefurb .processList li:nth-child(6)::after {
+    content: '';
+}
+
+/* -------------------------------------------------- */
