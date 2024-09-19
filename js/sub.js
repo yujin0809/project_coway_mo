@@ -467,7 +467,7 @@ const lifeElc = () => {
 
             // 별점
             const starImg = document.createElement('img');
-            starImg.setAttribute('src', `../images/common/ico_star1.png`);
+            starImg.setAttribute('src', `../../images/common/ico_star1.png`);
             const starPoint = document.createElement('span');
             starPoint.classList.add('starPoint');
             starPoint.textContent = data.starPoint;
@@ -530,7 +530,7 @@ const lifeElc = () => {
         compareP.innerHTML = `비교하실 제품이 <span>${pressBtnCnt}</span> 개 담겼습니다.`;
 
         const compareArrow = document.createElement('img');
-        compareArrow.setAttribute('src', `../images/common/arr_up4.png`);
+        compareArrow.setAttribute('src', `../../images/common/arr_up4.png`);
         compareArrow.classList.add('compareArrow');
 
         compareP.append(compareSpan);
@@ -762,7 +762,7 @@ const lifeElc = () => {
             compareArray = []; // 선택된 배열의 비교 카테고리 항목 제거
             ArrayCnt = 0;
             if (compareDiv.style.height === '70px') compareArrow.setAttribute('src', `/../images/common/arr_down4.png`);
-            else compareArrow.setAttribute('src', `../images/common/arr_up4.png`);
+            else compareArrow.setAttribute('src', `../../images/common/arr_up4.png`);
         });
 
         compareShowDiv.append(compareUl, compareCompleBtn, alldelDiv);
@@ -775,7 +775,7 @@ const lifeElc = () => {
                 compareDiv.style.height = '270px';
                 compareShowDiv.style.display = 'block';
             } else {
-                compareArrow.setAttribute('src', `../images/common/arr_up4.png`);
+                compareArrow.setAttribute('src', `../../images/common/arr_up4.png`);
                 compareDiv.style.height = '70px';
                 compareShowDiv.style.display = 'none';
             }
@@ -848,7 +848,7 @@ const lifeElc = () => {
                                         if (compareDiv.style.height === '270px') {
                                             compareDiv.style.height = '70px';
                                             compareShowDiv.style.display = 'none';
-                                            compareArrow.setAttribute('src', `../images/common/arr_up4.png`);
+                                            compareArrow.setAttribute('src', `../../images/common/arr_up4.png`);
                                         }
                                         compareDiv.style.height = '0px';
                                         compareDiv.style.transform = 'translateY(0)';
@@ -1073,7 +1073,7 @@ const lifeElcDetail = () => {
 
         // starImg
         const starImg = get('#lifeElcDetail .detailDiv .rightDiv .info .starPoint img');
-        starImg.setAttribute('src', `../images/common/ico_star1.png`);
+        starImg.setAttribute('src', `../../images/common/ico_star1.png`);
 
         // starCnt
         const starCnt = get('#lifeElcDetail .detailDiv .rightDiv .info .starCnt');
