@@ -162,7 +162,7 @@ const lifeElc = () => {
     mainImage.addEventListener('click', (e) => {
         location.href = '/page/products/lifeelc/lifeelcDetail.html';
         // 모바일 경로 지정
-        if (location.pathname.split('/').pop() === 'MoLifeElc.html') location.href = '/page/products/lifeelc/MoLifeElcDetail.html';
+        if (location.pathname.split('/').pop() === 'MoLifeElc.html') location.href = './lifeelc/MoLifeElcDetail.html';
         // localstorage 사용
         if (location.pathname.split('/').pop() === 'lifeelc.html') localStorage.setItem('productDetail', JSON.stringify(objectData[7]));
         if (location.pathname.split('/').pop() === 'MoLifeElc.html') localStorage.setItem('productDetail', JSON.stringify(objectData[7])); // 모바일
