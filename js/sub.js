@@ -1239,22 +1239,23 @@ const lifeElcDetail = () => {
                     detailData.key !== 'MC-C01'
                 ) {
                     if (typeof detailData.model === 'object') {
-                        mainImg.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
-                        subImg1.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                        mainImg.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                        subImg1.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
                         color.textContent = `${hexToColor(detailData.color[idx])}`;
                     } else if (typeof detailData.model === 'string') {
-                        mainImg.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
-                        subImg1.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
+                        mainImg.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
+                        subImg1.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
                         color.textContent = `${hexToColor(detailData.color)}`;
                     }
                 }
                 // CIR-F41, BAS41-A
                 else {
-                    mainImg.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                    mainImg.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
                     const subImgs = getAll('#lifeElcDetail .detailDiv .leftDiv .subImg .sub img');
                     subImgs.forEach((img, i) => {
-                        if (i === 0) img.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
-                        else if (i >= 1) img.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}_display0${i}.png`);
+                        if (i === 0) img.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                        else if (i >= 1)
+                            img.setAttribute('src', `../../../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}_display0${i}.png`);
                     });
                     color.textContent = `${hexToColor(detailData.color[idx])}`;
                 }
