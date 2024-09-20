@@ -2193,6 +2193,12 @@ html {
     width: 83.3333vw;
     height: 41.6667vw;
 }
+.pro_service_sec2_m .swiper-slide dl dt {
+    font-size: 3.6111vw;
+}
+.pro_service_sec3_m .gray_box .swiper-slide .top_text span {
+    font-size: 4.4444vw;
+}
 /* pro_service_sec2_m */
 .pro_service_sec3_m .title1 {
     padding-left: 5.556vw;

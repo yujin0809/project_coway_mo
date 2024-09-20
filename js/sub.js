@@ -1239,12 +1239,12 @@ const lifeElcDetail = () => {
                     detailData.key !== 'MC-C01'
                 ) {
                     if (typeof detailData.model === 'object') {
-                        mainImg.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
-                        subImg1.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                        mainImg.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
+                        subImg1.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model[idx]}.png`);
                         color.textContent = `${hexToColor(detailData.color[idx])}`;
                     } else if (typeof detailData.model === 'string') {
-                        mainImg.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
-                        subImg1.setAttribute('src', `/../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
+                        mainImg.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
+                        subImg1.setAttribute('src', `../images/products/lifeElc/${detailData.key}/${detailData.model}.png`);
                         color.textContent = `${hexToColor(detailData.color)}`;
                     }
                 }
