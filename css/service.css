@@ -2210,6 +2210,26 @@ html {
     width: 100%;
     box-sizing: border-box;
 }
+.pro_service_sec3_m .gray_box .swiper-slide .top_text p {
+    font-size: 5.1111vw;
+}
+.pro_service_sec3_m .swiper-slide ul li .sec3_img dl dd {
+    font-size: 4.4444vw;
+}
+/* dt 10px -> vw로 수정 */
+.pro_service_sec3_m .swiper-slide ul li .sec3_img dl dd {
+    font-size: 4.4444vw;
+}
+.pro_service_sec3_m .swiper-slide ul li .sec3_img dl dt {
+    font-size: 4.8vw;
+}
+.pro_service_sec3_m .gray_box .swiper-slide .top_text .ul_list0 li {
+    font-size: 3.6111vw;
+}
+.pro_service_sec3_m .swiper-slide ul li .sec3_img iframe {
+    width: 80.5556vw;
+    height: 59.7222vw;
+}
 .pro_service_sec3_m .gray_box .swiper-slide .top_text {
     margin-bottom: 7.7778vw;
 }
